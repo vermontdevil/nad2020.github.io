@@ -3,6 +3,46 @@
 <head>
 <title>#NAD2020</title>
 <style>
+    label {
+        font-size: 1.5rem;
+        color: #000;
+        margin: .5rem;
+        display: inline-block;
+    }
+    input {font-size: 1rem; padding: .2rem 0 .2rem 0; margin: .4rem;}
+    .button {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px 24px;
+    border: 1px solid #0f43bd;
+    border-radius: 8px;
+    background: #1d7eff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#1d7eff), to(#0f43bd));
+    background: -moz-linear-gradient(top, #1d7eff, #0f43bd);
+    background: linear-gradient(to bottom, #1d7eff, #0f43bd);
+    text-shadow: #09286f 1px 1px 1px;
+    font: normal normal bold 20px arial;
+    color: #ffffff;
+    text-decoration: none;
+}
+.button:hover,
+.button:focus {
+    border: 1px solid ##124fde;
+    background: #2397ff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#2397ff), to(#1250e3));
+    background: -moz-linear-gradient(top, #2397ff, #1250e3);
+    background: linear-gradient(to bottom, #2397ff, #1250e3);
+    color: #ffffff;
+    text-decoration: none;
+}
+.button:active {
+    background: #0f43bd;
+    background: -webkit-gradient(linear, left top, left bottom, from(#0f43bd), to(#0f43bd));
+    background: -moz-linear-gradient(top, #0f43bd, #0f43bd);
+    background: linear-gradient(to bottom, #0f43bd, #0f43bd);
+}
+
 .onepage .section {
   box-sizing: border-box;
   min-height: 100vh;
@@ -11,11 +51,8 @@
 }
 .onepage .section:nth-child(3n+1) {
   color: #fff;
-  background-color: #ba5959;
-  background-image: url('http://res.cloudinary.com/www-nad-org/image/upload/v1533500192/chicago-cloud-gate_awixl3.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color:royalblue;
+  
 }
 .onepage #section-1 p{
     font-size: 2rem;
@@ -30,16 +67,16 @@
   background-color: #4b2e5f;
 }
 .onepage .section:nth-child(3n+2) * {
-  color: #a163cc;
-  fill: #a163cc;
+  /*color: #a163cc;
+  fill: #a163cc;*/
 }
 .onepage .section:nth-child(3n+3) {
   color: #cbffc7;
   background-color: #61ba59;
 }
 .onepage .section:nth-child(3n+3) * {
-  color: #cbffc7;
-  fill: #cbffc7;
+  /*color: #cbffc7;
+  fill: #cbffc7;*/
 }
 .onepage .main-nav {
   position: fixed;
@@ -50,6 +87,7 @@
   text-align: center;
   background: rgba(0,0,0,0.2);
 }
+.hide {display: none;}
 @media (max-width: 40em) {
   .onepage .main-nav {
     width: 100%;
@@ -133,25 +171,37 @@ h2,
 <body class="onepage">
   <section class="section vertical" id="section-1">
     <div>
-      <h1>55th Biennal Conference</h1>        
-      <!--<svg class="svg" xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewbox="0 0 32 32">
-        <path d="M12 20l4-2 14-14-2-2-14 14-2 4zm-2.959 7.097c-.989-2.085-2.052-3.149-4.137-4.137l3.097-8.525 4-2.435 12-12h-6l-12 12-6 20 20-6 12-12v-6l-12 12-2.435 4z" fill="#ffc7c7"></path>
-      </svg>  -->      
-      <p>July 2020<br />Chicago, Illinois</p>
+      <img src="http://res.cloudinary.com/www-nad-org/image/upload/v1533502595/nad2020-full-page_z99t6k.jpg" width="100%">
     </div>
   </section>    
       
   <section class="section vertical" id="section-2">
     <div>
-      <h2>A second section</h2>        
-      <svg class="svg" xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewbox="0 0 32 32">
-        <path d="M22.423 0c-5.274 8.718-9.447 4.431-15.55 10.701-5.386 5.533-3.518 12.197 1.016 14.492 4.476-2.287 9.055-7.401 12.452-14.804 0 0 3.052 9.348-6.297 18.355 4.54 5.317 12.245 1.618 14.398-6.841 2.341-9.196-3.762-18.559-6.019-21.903zm-19.391 30.195c.004.091.107 1.805 2.355 1.805 1.636 0 9.932-4.521 14.196-16.256-6.451 11.413-15.816 14.245-16.551 14.451z" fill="#a163cc"></path>
-      </svg>        
-      <p>Intermediate section...</p>
+      <h2></h2>        
+      <!-- Begin MailChimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+<form action="https://nad.us4.list-manage.com/subscribe/post?u=345356fbd7e071d481371a100&amp;id=dc90d94938" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	<label for="mce-EMAIL">Get notified when #NAD2020 information is released!</label><br />
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_345356fbd7e071d481371a100_dc90d94938" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+
+<!--End mc_embed_signup-->
     </div>
   </section>    
       
-  <section class="section vertical" id="section-3">
+  <section class="section vertical hide" id="section-3">
     <div>
       <h2>A third section</h2>        
       <svg class="svg" xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewbox="0 0 32 32">
@@ -161,7 +211,7 @@ h2,
     </div>
   </section>    
       
-  <nav class="main-nav"><a href="#section-1">Home</a>      <a href="#section-2">What</a>      <a href="#section-3">I'm Interested!</a></nav>
+  <nav class="main-nav"><a href="#section-1">Home</a>      <a href="#section-2">I'm Interested!</a>      </nav>
 
 <script>
 
