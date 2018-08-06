@@ -1,277 +1,162 @@
-
 <html>
 <head>
-<title>#NAD2020</title>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>#NAD2020 Chicago</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css" rel="stylesheet" type="text/css">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="http://chicago.nad.org/custom_styles.css" rel="stylesheet" type="text/css">
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Google Fonts -->
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,500|Lato|Open+Sans' rel='stylesheet' type='text/css'>
+
+<link href='https://fonts.googleapis.com/css?family=Oswald:400,300|Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+<script src="https://use.fontawesome.com/2c22feb109.js"></script>
+
 <style>
-    label {
-        font-size: 1.5rem;
-        color: #000;
-        margin: .5rem;
-        display: inline-block;
-    }
-    input {font-size: 1rem; padding: .2rem 0 .2rem 0; margin: .4rem;}
-    .button {
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-    padding: 12px 24px;
-    border: 1px solid #0f43bd;
-    border-radius: 8px;
-    background: #1d7eff;
-    background: -webkit-gradient(linear, left top, left bottom, from(#1d7eff), to(#0f43bd));
-    background: -moz-linear-gradient(top, #1d7eff, #0f43bd);
-    background: linear-gradient(to bottom, #1d7eff, #0f43bd);
-    text-shadow: #09286f 1px 1px 1px;
-    font: normal normal bold 20px arial;
-    color: #ffffff;
-    text-decoration: none;
-}
-.button:hover,
-.button:focus {
-    border: 1px solid ##124fde;
-    background: #2397ff;
-    background: -webkit-gradient(linear, left top, left bottom, from(#2397ff), to(#1250e3));
-    background: -moz-linear-gradient(top, #2397ff, #1250e3);
-    background: linear-gradient(to bottom, #2397ff, #1250e3);
-    color: #ffffff;
-    text-decoration: none;
-}
-.button:active {
-    background: #0f43bd;
-    background: -webkit-gradient(linear, left top, left bottom, from(#0f43bd), to(#0f43bd));
-    background: -moz-linear-gradient(top, #0f43bd, #0f43bd);
-    background: linear-gradient(to bottom, #0f43bd, #0f43bd);
-}
-
-.onepage .section {
-  box-sizing: border-box;
-  min-height: 100vh;
-  margin: 0;
-  padding: 1rem 2rem;
-}
-.onepage .section:nth-child(3n+1) {
-  color: #fff;
-  background-color:royalblue;
-  
-}
-.onepage #section-1 p{
-    font-size: 2rem;
-}
-.onepage .section:nth-child(3n+1) * {
-  color: #fff;
-  fill: #fff;
-  text-shadow: 2px 2px #000;
-}
-.onepage .section:nth-child(3n+2) {
-  color: #a163cc;
-  background-color: #4b2e5f;
-}
-.onepage .section:nth-child(3n+2) * {
-  /*color: #a163cc;
-  fill: #a163cc;*/
-}
-.onepage .section:nth-child(3n+3) {
-  color: #cbffc7;
-  background-color: #61ba59;
-}
-.onepage .section:nth-child(3n+3) * {
-  /*color: #cbffc7;
-  fill: #cbffc7;*/
-}
-.onepage .main-nav {
-  position: fixed;
-  z-index: 4000;
-  display: table;
-  table-layout: fixed;
-  bottom: 0;
-  text-align: center;
-  background: rgba(0,0,0,0.2);
-}
-.hide {display: none !important; }
-@media (max-width: 40em) {
-  .onepage .main-nav {
-    width: 100%;
-  }
-}
-@media (min-width: 40em) {
-  .onepage .main-nav {
-    top: 0;
-    right: 0;
-  }
-}
-.onepage .main-nav a {
-  display: table-cell;
-  padding: 1rem;
-  color: #fefefe;
-  text-decoration: none;
-}
-.onepage .main-nav a.active {
-  background-color: rgba(0,0,0,0.3);
-}
-@import url("https://fonts.googleapis.com/css?family=OpenSans");
-html,
-body {
-  box-sizing: border-box;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  color: #fefefe;
-  font-family: 'Open Sans', Arial;
-}
-.vertical {
-  display: table;
-  width: 100%;
-  height: 100%;
-}
-.vertical > * {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-}
-p {
-  font-size: 1.2rem;
-}
-h1,
-.h1 {
-  margin-top: 1.6rem;
-  margin-bottom: 0.8rem;
-  font-size: 3.2rem;
-}
-h2,
-.h2 {
-  margin-top: 1.4rem;
-  margin-bottom: 0.7rem;
-  font-size: 2.8rem;
-}
-@media (max-width: 40em) {
-  p {
-    font-size: 6vmin;
-  }
-  h1,
-  .h1 {
-    font-size: 9.6vmin;
-  }
-  h2,
-  .h2 {
-    font-size: 7.6vmin;
-  }
-}
-.svg {
-  display: block;
-  margin: 5vh auto 0;
-  width: 100%;
-  height: 100%;
-  max-width: 30wh;
-  max-height: 30vh;
-}
+    /* http://res.cloudinary.com/www-nad-org/image/upload/w_0.5/nad2020-full-page_z99t6k.jpg */
+    
 </style>
-<script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="  crossorigin="anonymous"></script>
-  
-<body class="onepage">
-  <section class="section vertical" id="section-1">
-    <div>
-      <img src="http://res.cloudinary.com/www-nad-org/image/upload/v1533502595/nad2020-full-page_z99t6k.jpg" width="100%">
-    </div>
-  </section>    
-      
-  <section class="section vertical" id="section-2">
-    <div>
-      <h2></h2>        
-     <!-- Begin MailChimp Signup Form -->
-<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
-	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-</style>
-<div id="mc_embed_signup">
-<form action="https://nad.us4.list-manage.com/subscribe/post?u=345356fbd7e071d481371a100&amp;id=dc90d94938" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-    <div id="mc_embed_signup_scroll">
-	<label for="mce-EMAIL">Stay informed!</label>
-	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_345356fbd7e071d481371a100_dc90d94938" tabindex="-1" value=""></div>
-    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-    </div>
-</form>
-</div>
 
-<!--End mc_embed_signup-->
-    </div>
-  </section>    
-      
-  <section class="section vertical hide" id="section-3">
-    <div>
-      <h2>A third section</h2>        
-      <svg class="svg" xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewbox="0 0 32 32">
-        <path d="M14.533 19.422l-10.578-10.578c-5.273 6.086-5.273 15.07 0 21.156l10.578-10.578zm1.467-1.422v-18c-4.906.305-9.328 2.18-12.897 5.102l12.897 12.898zm2.002-13.984v14.812l-10.383 10.383c2.328 1.711 5.133 2.789 8.235 2.789 7.818 0 14.146-6.328 14.146-14.133 0-7.078-5.227-12.812-11.998-13.851z" fill="#cbffc7"></path>
-      </svg>        
-      <p>Congratulations, you managed without incident until the last level!</p>
-    </div>
-  </section>    
-      
-  <nav class="main-nav"><a href="#section-1">Home</a>      <a href="#section-2">I'm Interested!</a>      </nav>
+</head>
+
+
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+		<!-- NAVIGATION -->
+		<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand page-scroll" href="#page-top"><img src="https://chicago.nad.org/nad-blue-logo.png" style="height: 50px;" alt="NAD logo"></a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="navbar-collapse collapse" id="navbar">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="hidden">
+                        <a href="#page-top"></a>
+                    	</li>
+                    <li><a href="#sign">Sign Me Up!</a></li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container -->
+		</div><!-- /.navbar -->
+
+		<!-- HEADER -->
+		<header class="intro">
+			<div class="intro-body">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 col-offset-2 text-center">
+                                <p><a href="#sign" class="btn btn-default page-scroll">Sign Me Up!</a></p>
+                            <img src="http://res.cloudinary.com/www-nad-org/image/upload/w_0.5/nad2020-full-page_z99t6k.jpg">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+			
+		<!-- ABOUT SECTION -->
+		<section id="sign">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12 col-offset-2 text-center">
+                        <h2 class="section-heading">Sign Me Up</h2>
+                        <p>Enter your email address to stay up to date for upcoming annoucements.</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-lg-8 col-lg-offset-2 text-center">
+						 <!-- Begin MailChimp Signup Form -->
+                        <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+                        <style type="text/css">
+                            #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
+                            /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+                            We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+                        </style>
+                        <div id="mc_embed_signup">
+                        <form action="https://nad.us4.list-manage.com/subscribe/post?u=345356fbd7e071d481371a100&amp;id=dc90d94938" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                            <div id="mc_embed_signup_scroll">
+                            <label for="mce-EMAIL">Stay informed!</label>
+                            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_345356fbd7e071d481371a100_dc90d94938" tabindex="-1" value=""></div>
+                            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary"></div>
+                            </div>
+                        </form>
+                        </div>
+
+                        <!--End mc_embed_signup-->
+					</div>
+					
+
+				</div>
+			</div>
+		</section>
+  
+
+		<section id="footer">
+			<p class="text-center">&copy; 2018 - National Assocation of the Deaf</p>
+		</section>
+
+
 
 <script>
+// jQuery script to nav scroll to section
 
-// BEGIN One Page
-var $doc = $(document),
-    $sections = $('.section'),
-    $menu = $('.main-nav a'),
-    $body = $('html,body');
 
-var topToIndex = function(scrollTop) {
-  var offsetTop = 0,
-      indexlastSection;
-  $sections.each(function(i){
-    offsetTop = $(this).offset().top;
-    if ( scrollTop > offsetTop - 100 ) {
-    	indexlastSection = i;
-    }
-  })
-  return indexlastSection;
-}
-
-var retrieveActive = function() {
-  var scrollTop = $doc.scrollTop(),
-      activeIndex = topToIndex(scrollTop);
-  $('#debug').text( scrollTop )
-  
-  $sections.removeClass('active').eq(activeIndex).addClass('active')
-  $menu.removeClass('active').eq(activeIndex).addClass('active')
-  
-  return activeIndex;
-}
-
-$doc.keydown(function(e) {
-  
+$(document).ready(function(){
+  $('.nav li a').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+    && location.hostname == this.hostname) {
+      var $target = $(this.hash);
+      $target = $target.length && $target
+      || $('[name=' + this.hash.slice(1) +']');
+      if ($target.length) {
+        var targetOffset = $target.offset().top;
+        $('html,body')
+        .animate({scrollTop: targetOffset}, 1000);
+       return false;
+      }
+    }
+  });
 });
-// END One Page
 
-/*
-$('body').append('<div id ="debug" style="position:fixed;top:0;left:0;background:#0f0;" />')
-$doc.on('scroll', function() {
-  retrieveActive()
-})
-retrieveActive()
-*/
+//jQuery script to page-scroll & animate fa-icon
 
-// @link https://css-tricks.com/snippets/jquery/smooth-scrolling/
-$(function() {
-  $('a[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $body.animate({
-          scrollTop: target.offset().top
-        }, 400);
-        return false;
-      }
-    }
+$(document).ready(function() { 
+  $('a.page-scroll').click(function() {  
+    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')   && location.hostname == this.hostname) {   
+      var $target = $(this.hash);   
+      $target = $target.length && $target    || $('[name=' + this.hash.slice(1) + ']');   
+      if ($target.length) {    
+        var targetOffset = $target.offset().top;    
+        $('html,body')    .animate({
+          scrollTop: targetOffset
+        }, 1000);    
+        return false;   
+      }  
+    } 
   });
 });
 </script>
+
 </body>
 </html>
