@@ -245,22 +245,7 @@ var retrieveActive = function() {
 }
 
 $doc.keydown(function(e) {
-  e.preventDefault()
-
-  var $active = $sections.filter('.active'),
-      $prev = $active.prev('.section'),
-      $next = $active.next('.section');
   
-	if (e.keyCode == 37 || e.keyCode == 38) { // Arrow left or up
-		$body.animate({
-			scrollTop: $prev.length ? $prev.offset().top : $active.offset().top
-		}, 400);
-	}
-	if (e.keyCode == 39 || e.keyCode == 40) { // Arrow right or down
-		$body.animate({
-			scrollTop: $next.length ? $next.offset().top : $active.offset().top
-		}, 400);
-	}
 });
 // END One Page
 
