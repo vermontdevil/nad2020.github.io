@@ -178,7 +178,8 @@ section h2.section-heading {
 
 }
 
-.email { padding: .5rem; margin: .5rem 0;}
+.email { padding: .5rem; margin: 1rem 0;}
+label {font-size: 2rem;}
 
 
 /*----------------------------------------------------------------------------- 
