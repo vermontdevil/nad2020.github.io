@@ -81,7 +81,7 @@ NAVIGATION
 }
 
 .navbar {
-	padding: 5px;
+    padding: 5px 0 20px 0;
     background-color: white;
     border-bottom-color: #7F919B;
 }
